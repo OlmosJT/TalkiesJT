@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav.xml"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="uz.gita.talkiesjt.presenter.ui.screen.HomeScreen"
+        android:label="screen_home"
+        tools:layout="@layout/screen_home" >
+        <action
+            android:id="@+id/action_homeScreen_to_webViewArticleScreen"
+            app:destination="@id/webViewArticleScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="uz.gita.talkiesjt.presenter.ui.screen.SplashScreen"
+        android:label="screen_splash"
+        tools:layout="@layout/screen_splash" >
+        <action
+            android:id="@+id/action_splashScreen_to_homeScreen"
+            app:destination="@id/homeScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/webViewArticleScreen"
+        android:name="uz.gita.talkiesjt.presenter.ui.screen.WebViewArticleScreen"
+        android:label="screen_web_view"
+        tools:layout="@layout/screen_web_view" >
+        <argument
+            android:name="data"
+            app:argType="uz.gita.talkiesjt.data.model.ArticleData" />
+    </fragment>
+</navigation>

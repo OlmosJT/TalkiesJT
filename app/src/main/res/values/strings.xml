@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Talkies</string>
+    <string name="app_desc">Explore trending News, articles</string>
+    <string name="home">Home</string>
+    <string name="saved">Saved</string>
+    <string name="media">Media</string>
+    <string name="profile">Profile</string>
+    <string name="unknown_error">Unknown Error</string>
+    <string name="search">search</string>
+    <string name="settings">settings</string>
+    <string name="not_connected">You are not connected to internet</string>
+</resources>
